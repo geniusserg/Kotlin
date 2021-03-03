@@ -165,9 +165,24 @@ class Matrix {
 }
 
 fun main(){
-    var matrix:Array<Array<Float>> = Array<Array<Float>>(9) {i -> Array<Float>(9) { j -> 9f}}
+    var matrix:Array<Array<Float>> = Array<Array<Float>>(3) {i -> Array<Float>(3) { j -> 12f}}
     var aclass = Matrix(matrix)
     var bclass = Matrix(matrix)
-    var result = aclass * bclass
+    var result = aclass + bclass
     print(result)
+    /* 	 24.0+0.0*i    24.0+0.0*i    24.0+0.0*i   
+         24.0+0.0*i    24.0+0.0*i    24.0+0.0*i   
+         24.0+0.0*i    24.0+0.0*i    24.0+0.0*i 
+ */
+ 
+ 	var matrix2 = Array<Array<Complex>>(3) {i -> Array<Complex>(3) { j -> Complex(3f, -5f)}}
+    var aclass2 = Matrix(matrix2)
+    var bclass2 = Matrix(matrix2)
+    var result2 = aclass2 * bclass2
+    print(result2)
+    /*
+     -48.0-90.0*i    -48.0-90.0*i    -48.0-90.0*i   
+ -48.0-90.0*i    -48.0-90.0*i    -48.0-90.0*i   
+ -48.0-90.0*i    -48.0-90.0*i    -48.0-90.0*i  
+     */ 
 }
